@@ -8,6 +8,11 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const beanza = { ...obj };
+  Object.keys(beanza).forEach((property) => {
+    beanza[property] = beanza[property].trim();
+  });
+  return beanza;
 }
 
 /**
@@ -19,7 +24,10 @@ function trimProperties(obj) {
  * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
  */
 function trimPropertiesMutation(obj) {
-  // ✨ implement
+  Object.keys(obj).forEach((property) => {
+    obj[property] = obj[property].trim();
+  });
+  return obj;
 }
 
 /**
